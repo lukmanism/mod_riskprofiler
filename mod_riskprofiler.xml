@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site">
+	<name>Risk Profiler Module</name>
+	<author>Lukman Hussein</author>
+	<creationDate>Apr 2013</creationDate>
+	<copyright>Copyright  Lukman Hussein. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 </license>
+	<authorEmail>lukmanism@gmail.com</authorEmail>
+	<authorUrl>www.ntahla.com</authorUrl>
+	<version>1.0</version>
+	<description>RISKPROFILERMODULE</description>
+    <languages>
+	    <language tag="en-GB">language/en-GB/en-GB.mod_riskprofiler.ini</language>
+    </languages>
+
+	<files>
+		<filename module="mod_riskprofiler">mod_riskprofiler.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<filename>mod_riskprofiler.xml</filename>
+		<folder>js</folder>
+	</files>
+
+		<config>
+			<fields name="params">
+			<fieldset
+				name="basic">
+				<field
+					name="title"
+					type="text"
+					label="Title"
+					description="Module title" />
+			</fieldset>
+
+
+
+
+
+
+			<fieldset name="Group1" label="Group 1">
+				<field 
+					name="G1P1" 
+					type="sql" 
+					default="a" 
+					label="Product 1" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G1P2" 
+					type="sql" 
+					default="a" 
+					label="Product 2" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G1P3" 
+					type="sql" 
+					default="a" 
+					label="Product 3" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G1P4" 
+					type="sql" 
+					default="a" 
+					label="Product 4" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G1P5" 
+					type="sql" 
+					default="a" 
+					label="Product 5" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="Group2" label="Group 2">
+				<field 
+					name="G2P1" 
+					type="sql" 
+					default="a" 
+					label="Product 1" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G2P2" 
+					type="sql" 
+					default="a" 
+					label="Product 2" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G2P3" 
+					type="sql" 
+					default="a" 
+					label="Product 3" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G2P4" 
+					type="sql" 
+					default="a" 
+					label="Product 4" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G2P5" 
+					type="sql" 
+					default="a" 
+					label="Product 5" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="Group3" label="Group 3">
+				<field 
+					name="G3P1" 
+					type="sql" 
+					default="a" 
+					label="Product 1" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G3P2" 
+					type="sql" 
+					default="a" 
+					label="Product 2" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G3P3" 
+					type="sql" 
+					default="a" 
+					label="Product 3" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G3P4" 
+					type="sql" 
+					default="a" 
+					label="Product 4" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G3P5" 
+					type="sql" 
+					default="a" 
+					label="Product 5" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+			</fieldset>		
+
+			<fieldset name="Group4" label="Group 4">
+				<field 
+					name="G4P1" 
+					type="sql" 
+					default="a" 
+					label="Product 1" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G4P2" 
+					type="sql" 
+					default="a" 
+					label="Product 2" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G4P3" 
+					type="sql" 
+					default="a" 
+					label="Product 3" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G4P4" 
+					type="sql" 
+					default="a" 
+					label="Product 4" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G4P5" 
+					type="sql" 
+					default="a" 
+					label="Product 5" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="Group5" label="Group 5">
+				<field 
+					name="G5P1" 
+					type="sql" 
+					default="a" 
+					label="Product 1" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G5P2" 
+					type="sql" 
+					default="a" 
+					label="Product 2" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G5P3" 
+					type="sql" 
+					default="a" 
+					label="Product 3" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G5P4" 
+					type="sql" 
+					default="a" 
+					label="Product 4" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+				<field 
+					name="G5P5" 
+					type="sql" 
+					default="a" 
+					label="Product 5" 
+					query="SELECT id, title FROM #__content WHERE catid IN(SELECT id FROM #__categories WHERE parent_id = 79) AND state = 1 ORDER BY title ASC" 
+					key_field="id" 
+					value_field="title" > 
+					<option value="null"> - Select Product</option>
+				</field>
+			</fieldset>
+
+
+
+
+
+
+
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+
