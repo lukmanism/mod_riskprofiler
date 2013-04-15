@@ -16,11 +16,11 @@ defined('_JEXEC') or die;
     $risk_note = 'Having hard time deciding what suits you best? Let’s have a chat to find out how we can work together to achieve your investment needs. Drop us a note at <a href="mailto:customercare@hwangim.com" onclick="_gaq.push([\'_trackEvent\', \'Content\', \'Email\', \'customercare@hwangim.com\']);">customercare@hwangim.com</a> or <a href="contact-us/speak-to-us/">reach us</a> using your preferred choice of communication mode, and we will contact you!';
     $score_note = '<p>This is a simple gauge of your risk appetite. Investment recommendation is best done when we understand your objective, time horizon, overall investment portfolio and capital outlay.</p>
         <ul>
-            <li>0-5: Very Low risk appetite. Seek capital preservation.</li>
-            <li>6-11: Low risk appetite. Seek income with low risk tolerance.</li>
-            <li>12-18: Moderate risk appetite. Seek a balance of income and growth with moderate risk tolerance.</li>
-            <li>19-25: High risk appetite. Seek growth with moderately high risk tolerance.</li>
-            <li>26-32: Very High risk appetite. Seek growth with high risk tolerance.</li>
+            <li class="yourscore verylow">0-5: Very Low risk appetite. Seek capital preservation.</li>
+            <li class="yourscore low">6-11: Low risk appetite. Seek income with low risk tolerance.</li>
+            <li class="yourscore moderate">12-18: Moderate risk appetite. Seek a balance of income and growth with moderate risk tolerance.</li>
+            <li class="yourscore high">19-25: High risk appetite. Seek growth with moderately high risk tolerance.</li>
+            <li class="yourscore veryhigh">26-32: Very High risk appetite. Seek growth with high risk tolerance.</li>
         </ul>';
     $score_note_skipped = '<p>This is a simple gauge of your risk appetite. Investment recommendation is best done when we understand your objective, time horizon, overall investment portfolio and capital outlay.</p>
         <ul>
@@ -51,6 +51,7 @@ jQuery(document).ready(function($) {
         $(".hidden").hide();
         $(".score").html("");
         $(".message").html("");
+        $(".yourscore").removeClass('strong');
 
         var Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12, result;
         result_risk  = Array();
@@ -77,20 +78,25 @@ jQuery(document).ready(function($) {
 
             if(result<=5.4){
                 $(".very_low_risk").show();
+                $(".verylow").addClass('strong');
             } else if(result>=5.4 && result<=11.4) {
                 $(".low_risk").show();
+                $(".low").addClass('strong');
             } else if(result>=12.4 && result<=18.4) {
                 $(".moderate_risk").show();
+                $(".moderate").addClass('strong');
             } else if(result>=19.4 && result<=25.4) {
                 $(".high_risk").show();
+                $(".high").addClass('strong');
             } else {
                 $(".very_high_risk").show();
+                $(".veryhigh").addClass('strong');
             }
 
             $.scrollTo('.test_result', 800); 
 
             $(".result").show();
-            $(".score").html('Your score:</br>'+result);
+            $(".score").html('Your score: '+result);
         }
         return false;
     });
